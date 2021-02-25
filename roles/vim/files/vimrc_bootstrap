@@ -1,0 +1,7 @@
+call plug#begin('~/.vim/plugged')
+Plug 'Valloric/YouCompleteMe'
+Plug 'tomasiser/vim-code-dark'
+Plug 'rhysd/vim-clang-format'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+call plug#end()

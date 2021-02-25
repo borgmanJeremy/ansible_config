@@ -1,0 +1,12 @@
+- name: Set up PC for config
+  hosts: local
+  roles:
+    - role: packages
+      tags:
+        - packages
+    - role: tmux
+      tags: 
+        - tmux
+    - role: vim
+      tags:
+        - vim

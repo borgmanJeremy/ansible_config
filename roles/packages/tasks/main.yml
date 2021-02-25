@@ -1,0 +1,21 @@
+- name :  Install packages with no config
+  become: yes
+  become_user: root
+  package:  
+    state: present
+    name: "{{ item }}"
+  loop: 
+    - clang
+    - cmake
+    - curl
+    - fish
+    - fzf
+    - git
+    - htop
+    - ninja-build
+    - python3
+    - python3-dev
+    - ripgrep
+    - tldr
+    - tree
+

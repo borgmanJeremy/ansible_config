@@ -1,0 +1,16 @@
+- name: Installs tmux
+  become: yes
+  become_user: root
+  package:
+    name: tmux
+    state: present
+
+- name: Link tmux config
+  copy:
+    src: tmux.conf
+    dest: "{{ lookup('env', 'HOME') }}/.tmux.conf"
+
+- name: Link tmux local config
+  copy:
+    src: tmux.conf.local
+    dest: "{{ lookup('env', 'HOME') }}/.tmux.conf.local"
